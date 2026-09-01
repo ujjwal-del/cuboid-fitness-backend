@@ -78,7 +78,7 @@ import {
 
 const drawerWidth = 240;
 
-const API_URL = "http://localhost:3001";
+const API_URL = "https://cuboid-fitness-backend.onrender.com";
 const PLAN_FEES = { Monthly: 1700, Quarterly: 4500, "Half Year": 8000, Yearly: 13999 };
 const getPlanFee = (plan) => PLAN_FEES[plan] || 0;
 
@@ -356,7 +356,7 @@ function LoginScreen({ onLogin }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        bgcolor: "#f5f6fa",
+        bgcolor: "#050505",
         px: 2,
       }}
     >
@@ -382,7 +382,7 @@ function LoginScreen({ onLogin }) {
                 height: 75,
                 mx: "auto",
                 mb: 2,
-                bgcolor: "#1976d2",
+                bgcolor: "#FFD000",
               }}
             >
               <Lock fontSize="large" />
@@ -515,7 +515,7 @@ function LoadingScreen() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        bgcolor: "#f5f6fa",
+        bgcolor: "#050505",
       }}
     >
       <Typography
@@ -1592,7 +1592,7 @@ useEffect(() => {
         minHeight: "100vh",
         width: "100%",
         bgcolor: "#050812",
-        color: "#e5e7eb",
+        color: "#f5f5f5",
         position: "relative",
         overflow: "hidden",
         display: "flex",
@@ -1601,20 +1601,20 @@ useEffect(() => {
     >
       <style>{`
         @keyframes cuboidFloat { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-14px) rotate(5deg)} }
-        @keyframes cuboidPulse { 0%,100%{opacity:.35;box-shadow:0 0 18px rgba(139,92,246,.18)} 50%{opacity:1;box-shadow:0 0 38px rgba(139,92,246,.55)} }
+        @keyframes cuboidPulse { 0%,100%{opacity:.35;box-shadow:0 0 18px rgba(255,208,0,.14)} 50%{opacity:1;box-shadow:0 0 38px rgba(255,208,0,.52)} }
         @keyframes cuboidScan { 0%{transform:translateX(-110%)} 100%{transform:translateX(500%)} }
         @keyframes cuboidRise { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
-        @keyframes cuboidGlow { 0%,100%{filter:drop-shadow(0 0 5px rgba(56,189,248,.15))} 50%{filter:drop-shadow(0 0 16px rgba(56,189,248,.5))} }
+        @keyframes cuboidGlow { 0%,100%{filter:drop-shadow(0 0 5px rgba(255,208,0,.12))} 50%{filter:drop-shadow(0 0 16px rgba(255,208,0,.48))} }
         .cuboid-card{position:relative;overflow:hidden;animation:cuboidRise .55s ease both}
         .cuboid-card:after{content:"";position:absolute;left:-25%;top:0;width:12%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.045),transparent);transform:skewX(-18deg);animation:cuboidScan 7s linear infinite;pointer-events:none}
         .cuboid-hover{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-        .cuboid-hover:hover{transform:translateY(-4px);border-color:rgba(129,92,246,.65)!important;box-shadow:0 18px 45px rgba(0,0,0,.28),0 0 30px rgba(129,92,246,.10)!important}
-        .cuboid-grid{background-image:linear-gradient(rgba(148,163,184,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.035) 1px,transparent 1px);background-size:38px 38px}
-        .cuboid-app .MuiCard-root{background:#0b1220!important;color:#e5e7eb;border-color:#1c293d!important}
-        .cuboid-app .MuiCardContent-root{color:#e5e7eb}
-        .cuboid-app .MuiTableCell-root{color:#e5e7eb;border-color:#1c293d}
+        .cuboid-hover:hover{transform:translateY(-4px);border-color:rgba(255,208,0,.70)!important;box-shadow:0 18px 45px rgba(0,0,0,.28),0 0 30px rgba(255,208,0,.12)!important}
+        .cuboid-grid{background-image:linear-gradient(rgba(255,208,0,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,208,0,.035) 1px,transparent 1px);background-size:38px 38px}
+        .cuboid-app .MuiCard-root{background:#0a0a0a!important;color:#f5f5f5;border-color:#292929!important}
+        .cuboid-app .MuiCardContent-root{color:#f5f5f5}
+        .cuboid-app .MuiTableCell-root{color:#f5f5f5;border-color:#292929}
         .cuboid-app .MuiDialog-paper{
-          background:#0d1522;
+          background:#0b0b0b;
           opacity:1 !important;
         }
 
@@ -1683,12 +1683,12 @@ useEffect(() => {
 
         .cuboid-3d-ring {
           position: absolute;
-          border: 1px solid rgba(124, 58, 237, .16);
+          border: 1px solid rgba(255,208,0,.18);
           border-radius: 50%;
           transform-style: preserve-3d;
           box-shadow:
-            0 0 26px rgba(124, 58, 237, .08),
-            inset 0 0 26px rgba(34, 211, 238, .03);
+            0 0 26px rgba(255,208,0,.10),
+            inset 0 0 26px rgba(255,208,0,.025);
           animation: cuboid3dRing 12s ease-in-out infinite;
         }
 
@@ -1713,11 +1713,11 @@ useEffect(() => {
           position: absolute;
           width: 104px;
           height: 104px;
-          border: 1px solid rgba(167, 139, 250, .22);
-          background: linear-gradient(145deg, rgba(124, 58, 237, .06), rgba(34, 211, 238, .03));
+          border: 1px solid rgba(255,208,0,.24);
+          background: linear-gradient(145deg, rgba(124, 58, 237, .06), rgba(255,208,0,.025));
           box-shadow:
             0 0 38px rgba(124, 58, 237, .10),
-            inset 0 0 24px rgba(34, 211, 238, .04);
+            inset 0 0 24px rgba(255,208,0,.035);
           transform-style: preserve-3d;
           animation: cuboid3dCube 11s ease-in-out infinite;
         }
@@ -1727,12 +1727,12 @@ useEffect(() => {
           content: "";
           position: absolute;
           inset: 13px;
-          border: 1px solid rgba(34, 211, 238, .14);
+          border: 1px solid rgba(255,208,0,.15);
         }
 
         .cuboid-3d-cube:after {
           inset: 29px;
-          border-color: rgba(167, 139, 250, .14);
+          border-color: rgba(255,208,0,.16);
         }
 
         .cuboid-3d-cube.c1 {
@@ -1753,7 +1753,7 @@ useEffect(() => {
           width: 170px;
           height: 50px;
           transform-style: preserve-3d;
-          filter: drop-shadow(0 0 20px rgba(124, 58, 237, .16));
+          filter: drop-shadow(0 0 20px rgba(255,208,0,.18));
           animation: cuboid3dDumbbell 8s ease-in-out infinite;
         }
 
@@ -2271,7 +2271,7 @@ useEffect(() => {
         <Box className="cuboid-grid" sx={{ position:"absolute", inset:0, opacity:.35 }} />
         <Box sx={{ position:"absolute", top:90, right:7, width:320, height:320, borderRadius:"50%", background:"radial-gradient(circle, rgba(124,58,237,.20), transparent 65%)", filter:"blur(8px)" }} />
         <Box sx={{ position:"absolute", bottom:-120, left:100, width:420, height:420, borderRadius:"50%", background:"radial-gradient(circle, rgba(14,165,233,.12), transparent 65%)", filter:"blur(10px)" }} />
-        <Box sx={{ position:"absolute", top:100, right:80, width:82, height:82, border:"1px solid rgba(139,92,246,.55)", transform:"rotate(45deg)", animation:"cuboidFloat 5s ease-in-out infinite", boxShadow:"0 0 30px rgba(139,92,246,.16)" }} />
+        <Box sx={{ position:"absolute", top:100, right:80, width:82, height:82, border:"1px solid rgba(255,208,0,.52)", transform:"rotate(45deg)", animation:"cuboidFloat 5s ease-in-out infinite", boxShadow:"0 0 30px rgba(139,92,246,.16)" }} />
         <Box sx={{ position:"absolute", top:138, right:118, width:82, height:82, border:"1px solid rgba(56,189,248,.28)", transform:"rotate(45deg)", animation:"cuboidFloat 6s ease-in-out infinite reverse" }} />
       </Box>
 
@@ -2285,11 +2285,11 @@ useEffect(() => {
       >
         <Toolbar sx={{ minHeight:"72px!important", justifyContent:"space-between", gap:2 }}>
           <Box sx={{ display:"flex", alignItems:"center", gap:1.5, flex:1 }}>
-            <Box sx={{ width:38,height:38,borderRadius:2,border:"1px solid #6d4aff",display:"grid",placeItems:"center",background:"linear-gradient(145deg,#17122d,#0b1220)",boxShadow:"0 0 22px rgba(124,58,237,.22)" }}>
+            <Box sx={{ width:38,height:38,borderRadius:2,border:"1px solid #6d4aff",display:"grid",placeItems:"center",background:"linear-gradient(145deg,#17122d,#0a0a0a)",boxShadow:"0 0 22px rgba(124,58,237,.22)" }}>
               <FitnessCenter sx={{ fontSize:19,color:"#a78bfa" }} />
             </Box>
             <Box sx={{ display:{xs:"none",md:"block"}, maxWidth:440, flex:1 }}>
-              <TextField fullWidth size="small" placeholder="Search members, plans, payments..." InputProps={{ startAdornment:<InputAdornment position="start"><Search sx={{color:"#64748b"}}/></InputAdornment> }} sx={{"& .MuiOutlinedInput-root":{bgcolor:"#0b1220",borderRadius:2.5,color:"#e5e7eb","& fieldset":{borderColor:"#1f2a3a"},"&:hover fieldset":{borderColor:"#4c3a8a"}}}} />
+              <TextField fullWidth size="small" placeholder="Search members, plans, payments..." InputProps={{ startAdornment:<InputAdornment position="start"><Search sx={{color:"#64748b"}}/></InputAdornment> }} sx={{"& .MuiOutlinedInput-root":{bgcolor:"#0a0a0a",borderRadius:2.5,color:"#f5f5f5","& fieldset":{borderColor:"#1f2a3a"},"&:hover fieldset":{borderColor:"#4c3a8a"}}}} />
             </Box>
             <Box sx={{display:{xs:"block",md:"none"}}}><Typography fontWeight={900}>CUBOID FITNESS</Typography></Box>
           </Box>
@@ -2308,7 +2308,7 @@ useEffect(() => {
       <Drawer variant="permanent" sx={{width:drawerWidth,flexShrink:0,"& .MuiDrawer-paper":{width:drawerWidth,boxSizing:"border-box",bgcolor:"#070b14",color:"#fff",borderRight:"1px solid #182235",overflow:"hidden"}}}>
         <Toolbar sx={{minHeight:"72px!important",px:2.2}}>
           <Box sx={{display:"flex",alignItems:"center",gap:1.2}}>
-            <Box sx={{width:40,height:40,borderRadius:2,border:"1px solid #8b5cf6",display:"grid",placeItems:"center",background:"linear-gradient(145deg,#1b1235,#0b1220)",boxShadow:"0 0 24px rgba(139,92,246,.25)",animation:"cuboidGlow 3s ease-in-out infinite"}}><Box sx={{width:17,height:17,border:"2px solid #a78bfa",transform:"rotate(45deg)"}}/></Box>
+            <Box sx={{width:40,height:40,borderRadius:2,border:"1px solid #8b5cf6",display:"grid",placeItems:"center",background:"linear-gradient(145deg,#1b1235,#0a0a0a)",boxShadow:"0 0 24px rgba(139,92,246,.25)",animation:"cuboidGlow 3s ease-in-out infinite"}}><Box sx={{width:17,height:17,border:"2px solid #a78bfa",transform:"rotate(45deg)"}}/></Box>
             <Box><Typography
                 sx={{
                   fontWeight: 1000,
@@ -2348,7 +2348,7 @@ useEffect(() => {
           <SidebarItem icon={<Settings/>} text="Settings" active={page==="Settings"} onClick={()=>setPage("Settings")} />
         </List>
         <Box sx={{mt:"auto",p:1.5}}>
-          <Box sx={{p:1.5,borderRadius:3,border:"1px solid #1f2a3a",bgcolor:"#0b1220"}}>
+          <Box sx={{p:1.5,borderRadius:3,border:"1px solid #1f2a3a",bgcolor:"#0a0a0a"}}>
             <Typography sx={{fontSize:9,color:"#64748b",letterSpacing:1.4,fontWeight:900}}>SYSTEM STATUS</Typography>
             <Box sx={{display:"flex",alignItems:"center",gap:1,mt:1}}><Box sx={{width:7,height:7,borderRadius:"50%",bgcolor:"#22c55e",boxShadow:"0 0 10px #22c55e"}}/><Typography sx={{fontSize:12,fontWeight:800}}>All systems operational</Typography></Box>
           </Box>
@@ -2378,7 +2378,7 @@ useEffect(() => {
                 <Typography sx={{fontSize:{xs:26,md:34},fontWeight:950,letterSpacing:"-1px"}}>Command Center</Typography>
                 <Typography sx={{color:"#64748b",mt:.5,fontSize:13}}>Live intelligence for Cuboid Fitness operations.</Typography>
               </Box>
-              <Chip icon={<EventAvailable sx={{fontSize:16}}/>} label={`Today · ${new Date(`${today}T00:00:00`).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"})}`} sx={{bgcolor:"#0b1220",color:"#a78bfa",border:"1px solid #2b2250",fontWeight:800}} />
+              <Chip icon={<EventAvailable sx={{fontSize:16}}/>} label={`Today · ${new Date(`${today}T00:00:00`).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"})}`} sx={{bgcolor:"#0a0a0a",color:"#a78bfa",border:"1px solid #2b2250",fontWeight:800}} />
             </Box>
 
             {/* KPI row */}
@@ -2391,7 +2391,7 @@ useEffect(() => {
                 ["MONTHLY REVENUE",`₹${monthlyRevenue.toLocaleString("en-IN")}`,MonetizationOn,"#34d399","Live","received"],
               ].map(([title,value,Icon,accent,delta,note],i)=>(
                 <Grid item xs={12} sm={6} lg={2.4} key={title} sx={{ minWidth: 0, boxSizing: "border-box" }}>
-                  <Box className="cuboid-card cuboid-hover" sx={{height:"100%",boxSizing:"border-box",p:2,borderRadius:3,bgcolor:"rgba(11,18,32,.88)",border:"1px solid #1c293d",boxShadow:"0 14px 40px rgba(0,0,0,.20)"}}>
+                  <Box className="cuboid-card cuboid-hover" sx={{height:"100%",boxSizing:"border-box",p:2,borderRadius:3,bgcolor:"rgba(11,18,32,.88)",border:"1px solid #292929",boxShadow:"0 14px 40px rgba(0,0,0,.20)"}}>
                     <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
                       <Typography sx={{fontSize:9,color:"#64748b",letterSpacing:1.2,fontWeight:900}}>{title}</Typography>
                       <Box sx={{width:36,height:36,borderRadius:2,border:`1px solid ${accent}55`,display:"grid",placeItems:"center",color:accent,bgcolor:`${accent}10`}}><Icon sx={{fontSize:18}}/></Box>
@@ -2406,7 +2406,7 @@ useEffect(() => {
             {/* Analytics */}
             <Grid container spacing={2} sx={{ mt: .2, width: "100%", boxSizing: "border-box", alignItems: "stretch" }}>
               <Grid item xs={12} lg={7} sx={{ minWidth: 0, boxSizing: "border-box" }}>
-                <Box className="cuboid-card" sx={{p:2.2,borderRadius:3,bgcolor:"rgba(11,18,32,.88)",border:"1px solid #1c293d",height:"100%",boxSizing:"border-box"}}>
+                <Box className="cuboid-card" sx={{p:2.2,borderRadius:3,bgcolor:"rgba(11,18,32,.88)",border:"1px solid #292929",height:"100%",boxSizing:"border-box"}}>
                   <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",mb:2}}><Box><Typography sx={{fontWeight:900,fontSize:14}}>Member Growth</Typography><Typography sx={{fontSize:10,color:"#64748b",mt:.3}}>Active member trajectory</Typography></Box><Chip label="LIVE" size="small" sx={{height:22,bgcolor:"#14261d",color:"#4ade80",fontSize:9,fontWeight:900}}/></Box>
                   <Box sx={{height:220,position:"relative",display:"flex",alignItems:"flex-end",gap:1.2,px:1,overflow:"hidden"}}>
                     {(() => {
@@ -2479,15 +2479,15 @@ useEffect(() => {
               </Grid>
 
               <Grid item xs={12} md={6} lg={2.5} sx={{ minWidth: 0, boxSizing: "border-box" }}>
-                <Box className="cuboid-card" sx={{p:2.2,borderRadius:3,bgcolor:"rgba(11,18,32,.88)",border:"1px solid #1c293d",height:"100%",boxSizing:"border-box"}}>
+                <Box className="cuboid-card" sx={{p:2.2,borderRadius:3,bgcolor:"rgba(11,18,32,.88)",border:"1px solid #292929",height:"100%",boxSizing:"border-box"}}>
                   <Typography sx={{fontWeight:900,fontSize:14}}>Plan Mix</Typography><Typography sx={{fontSize:10,color:"#64748b",mt:.3}}>Current members</Typography>
-                  <Box sx={{width:140,height:140,mx:"auto",my:2,borderRadius:"50%",background:"conic-gradient(#8b5cf6 0 42%, #22d3ee 42% 70%, #38bdf8 70% 88%, #f59e0b 88% 100%)",display:"grid",placeItems:"center",position:"relative",animation:"cuboidPulse 4s ease-in-out infinite"}}><Box sx={{width:96,height:96,borderRadius:"50%",bgcolor:"#0b1220",display:"grid",placeItems:"center",textAlign:"center"}}><Typography sx={{fontSize:22,fontWeight:950}}>{members.length}</Typography><Typography sx={{fontSize:9,color:"#64748b"}}>TOTAL</Typography></Box></Box>
+                  <Box sx={{width:140,height:140,mx:"auto",my:2,borderRadius:"50%",background:"conic-gradient(#8b5cf6 0 42%, #22d3ee 42% 70%, #38bdf8 70% 88%, #f59e0b 88% 100%)",display:"grid",placeItems:"center",position:"relative",animation:"cuboidPulse 4s ease-in-out infinite"}}><Box sx={{width:96,height:96,borderRadius:"50%",bgcolor:"#0a0a0a",display:"grid",placeItems:"center",textAlign:"center"}}><Typography sx={{fontSize:22,fontWeight:950}}>{members.length}</Typography><Typography sx={{fontSize:9,color:"#64748b"}}>TOTAL</Typography></Box></Box>
                   <Stack spacing={1}>{planStats.map((x,i)=><Box key={x.plan} sx={{display:"flex",alignItems:"center",gap:1}}><Box sx={{width:7,height:7,borderRadius:"50%",bgcolor:["#8b5cf6","#22d3ee","#38bdf8","#f59e0b"][i]}}/><Typography sx={{fontSize:10,flex:1,color:"#94a3b8"}}>{x.plan}</Typography><Typography sx={{fontSize:10,fontWeight:900}}>{x.count}</Typography></Box>)}</Stack>
                 </Box>
               </Grid>
 
               <Grid item xs={12} md={6} lg={2.5} sx={{ minWidth: 0, boxSizing: "border-box" }}>
-                <Box className="cuboid-card" sx={{p:2.2,borderRadius:3,bgcolor:"rgba(11,18,32,.88)",border:"1px solid #1c293d",height:"100%",boxSizing:"border-box"}}>
+                <Box className="cuboid-card" sx={{p:2.2,borderRadius:3,bgcolor:"rgba(11,18,32,.88)",border:"1px solid #292929",height:"100%",boxSizing:"border-box"}}>
                   <Typography sx={{fontWeight:900,fontSize:14}}>Operations Pulse</Typography><Typography sx={{fontSize:10,color:"#64748b",mt:.3}}>Today at a glance</Typography>
                   <Stack spacing={1.5} sx={{mt:2}}>
                     {[["New registrations",newThisMonth,GroupAdd,"#a78bfa"],["Active members",activeMembers,CheckCircle,"#22c55e"],["Expiring soon",expiringSoon,Warning,"#fb923c"],["Revenue received",`₹${monthlyRevenue.toLocaleString("en-IN")}`,MonetizationOn,"#34d399"]].map(([label,val,Icon,c],i)=><Box key={label} sx={{display:"flex",alignItems:"center",gap:1.1,p:1.1,borderRadius:2,bgcolor:"#0a101c",border:"1px solid #172236"}}><Box sx={{width:30,height:30,borderRadius:1.7,bgcolor:`${c}12`,color:c,display:"grid",placeItems:"center"}}><Icon sx={{fontSize:15}}/></Box><Box sx={{flex:1}}><Typography sx={{fontSize:9,color:"#64748b"}}>{label}</Typography><Typography sx={{fontSize:14,fontWeight:900}}>{val}</Typography></Box></Box>)}
@@ -2514,11 +2514,11 @@ useEffect(() => {
       </Box>
 
       {/* Member profile drawer */}
-      <Drawer anchor="right" open={Boolean(selectedMember)} onClose={()=>setSelectedMember(null)} PaperProps={{sx:{width:{xs:"100%",sm:430},bgcolor:"#070b14",color:"#e5e7eb",borderLeft:"1px solid #27324a",boxShadow:"-20px 0 70px rgba(0,0,0,.55)"}}}>
+      <Drawer anchor="right" open={Boolean(selectedMember)} onClose={()=>setSelectedMember(null)} PaperProps={{sx:{width:{xs:"100%",sm:430},bgcolor:"#070b14",color:"#f5f5f5",borderLeft:"1px solid #27324a",boxShadow:"-20px 0 70px rgba(0,0,0,.55)"}}}>
         {selectedMember && <Box sx={{height:"100%",display:"flex",flexDirection:"column"}}>
           <Box sx={{p:2.2,borderBottom:"1px solid #1b2638",display:"flex",justifyContent:"space-between",alignItems:"center"}}><Box><Typography sx={{fontSize:10,color:"#8b5cf6",letterSpacing:1.5,fontWeight:900}}>MEMBER PROFILE</Typography><Typography sx={{fontSize:19,fontWeight:950,mt:.4}}>{selectedMember.name}</Typography></Box><IconButton onClick={()=>setSelectedMember(null)} sx={{color:"#94a3b8"}}><Close/></IconButton></Box>
           <Box sx={{p:2.5,overflowY:"auto",flex:1}}>
-            <Box sx={{p:2,borderRadius:3,border:"1px solid #2b2250",background:"radial-gradient(circle at 50% 0%,rgba(139,92,246,.18),transparent 55%),#0b1220",textAlign:"center",position:"relative",overflow:"hidden"}}>
+            <Box sx={{p:2,borderRadius:3,border:"1px solid #2b2250",background:"radial-gradient(circle at 50% 0%,rgba(255,208,0,.14),transparent 55%),#0a0a0a",textAlign:"center",position:"relative",overflow:"hidden"}}>
               <Box sx={{position:"absolute",width:130,height:130,border:"1px solid #8b5cf655",transform:"rotate(45deg)",left:"calc(50% - 65px)",top:8,animation:"cuboidFloat 5s ease-in-out infinite"}}/>
               <Avatar src={selectedMember.photo || undefined} sx={{width:130,height:130,mx:"auto",border:"3px solid #8b5cf6",boxShadow:"0 0 34px rgba(139,92,246,.35)",bgcolor:"#111827",position:"relative"}}>{!selectedMember.photo && <People sx={{fontSize:55,color:"#64748b"}}/>}</Avatar>
               <Typography sx={{fontSize:20,fontWeight:950,mt:2}}>{selectedMember.name}</Typography>
@@ -2526,10 +2526,10 @@ useEffect(() => {
             </Box>
 
             <Grid container spacing={1.2} sx={{mt:1.5}}>
-              {[["MEMBER ID",selectedMember.id,BarChart],["FINGERPRINT ID",selectedMember.fingerprintId || selectedMember.id,People],["PLAN",selectedMember.plan,FitnessCenter],["JOINING",selectedMember.joiningDate,CalendarMonth],["EXPIRY",selectedMember.expiryDate,EventAvailable],["PHONE",selectedMember.phone,Phone],["EMAIL",selectedMember.email || "Not added",Email]].map(([label,value,Icon])=><Grid item xs={6} key={label}><Box sx={{p:1.5,borderRadius:2.5,bgcolor:"#0b1220",border:"1px solid #182235"}}><Typography sx={{fontSize:8,color:"#64748b",letterSpacing:1,fontWeight:900}}>{label}</Typography><Typography sx={{fontSize:12,fontWeight:850,mt:.5,wordBreak:"break-word"}}>{value || "—"}</Typography></Box></Grid>)}
+              {[["MEMBER ID",selectedMember.id,BarChart],["FINGERPRINT ID",selectedMember.fingerprintId || selectedMember.id,People],["PLAN",selectedMember.plan,FitnessCenter],["JOINING",selectedMember.joiningDate,CalendarMonth],["EXPIRY",selectedMember.expiryDate,EventAvailable],["PHONE",selectedMember.phone,Phone],["EMAIL",selectedMember.email || "Not added",Email]].map(([label,value,Icon])=><Grid item xs={6} key={label}><Box sx={{p:1.5,borderRadius:2.5,bgcolor:"#0a0a0a",border:"1px solid #182235"}}><Typography sx={{fontSize:8,color:"#64748b",letterSpacing:1,fontWeight:900}}>{label}</Typography><Typography sx={{fontSize:12,fontWeight:850,mt:.5,wordBreak:"break-word"}}>{value || "—"}</Typography></Box></Grid>)}
             </Grid>
 
-            <Box sx={{mt:1.5,p:1.7,borderRadius:2.5,bgcolor:"#0b1220",border:"1px solid #182235"}}>
+            <Box sx={{mt:1.5,p:1.7,borderRadius:2.5,bgcolor:"#0a0a0a",border:"1px solid #182235"}}>
               <Typography sx={{fontSize:9,color:"#64748b",letterSpacing:1.2,fontWeight:900}}>PAYMENT SNAPSHOT</Typography>
               <Box sx={{display:"flex",justifyContent:"space-between",mt:1.2}}><Typography sx={{fontSize:12,color:"#94a3b8"}}>Plan fee</Typography><Typography sx={{fontWeight:900}}>₹{Number(selectedMember.planFee||0).toLocaleString("en-IN")}</Typography></Box>
               <Box sx={{display:"flex",justifyContent:"space-between",mt:.8}}><Typography sx={{fontSize:12,color:"#94a3b8"}}>Received</Typography><Typography sx={{fontWeight:900,color:"#34d399"}}>₹{Number(selectedMember.feeReceived||0).toLocaleString("en-IN")}</Typography></Box>
@@ -2577,7 +2577,7 @@ useEffect(() => {
               Renew Membership
             </Button>
 
-            <Box sx={{mt:1.5,p:1.7,borderRadius:2.5,bgcolor:"#0b1220",border:"1px solid #182235"}}>
+            <Box sx={{mt:1.5,p:1.7,borderRadius:2.5,bgcolor:"#0a0a0a",border:"1px solid #182235"}}>
               <Typography sx={{fontSize:9,color:"#64748b",letterSpacing:1.2,fontWeight:900}}>MEMBERSHIP HEALTH</Typography>
               <Box sx={{mt:1.5,height:8,bgcolor:"#172236",borderRadius:99,overflow:"hidden"}}><Box sx={{height:"100%",width:selectedMember.status==="Expired"?"100%":"72%",background:"linear-gradient(90deg,#8b5cf6,#22d3ee)",borderRadius:99}}/></Box>
               <Typography sx={{fontSize:10,color:"#64748b",mt:.8}}>{selectedMember.status==="Expired"?"Membership expired":"Membership currently active"}</Typography>
@@ -2884,7 +2884,7 @@ useEffect(() => {
           EDIT MEMBER DIALOG
       =================================================== */}
       <Dialog open={openEditMember} onClose={() => !savingEditMember && setOpenEditMember(false)} fullWidth maxWidth="md"
-        PaperProps={{sx:{bgcolor:"#0d1522",color:"#e5e7eb",border:"1px solid rgba(129,92,246,.35)",borderRadius:4}}}>
+        PaperProps={{sx:{bgcolor:"#0b0b0b",color:"#f5f5f5",border:"1px solid rgba(129,92,246,.35)",borderRadius:4}}}>
         <DialogTitle sx={{color:"#fff",borderBottom:"1px solid #1f2a3a"}}>
           <Typography sx={{fontWeight:950,fontSize:20}}>Edit Member Details</Typography>
           <Typography sx={{color:"#94a3b8",fontSize:12,mt:.5}}>Member ID, Gym ID and Fingerprint ID use the same value.</Typography>
@@ -3767,7 +3767,7 @@ function WhatsAppPage({
                         bgcolor:
                           "#f8fafc",
                         borderBottom:
-                          "1px solid #e5e7eb",
+                          "1px solid #f5f5f5",
                         fontWeight:
                           "bold",
                         fontSize: 13,
@@ -3931,11 +3931,11 @@ function MembersCard({
   onMemberClick,
 }) {
   return (
-    <Box className="cuboid-card" sx={{ borderRadius:3, bgcolor:"rgba(11,18,32,.88)", border:"1px solid #1c293d", overflow:"hidden" }}>
+    <Box className="cuboid-card" sx={{ borderRadius:3, bgcolor:"rgba(11,18,32,.88)", border:"1px solid #292929", overflow:"hidden" }}>
       <Box sx={{p:{xs:1.8,sm:2.2},display:"flex",justifyContent:"space-between",alignItems:"center",gap:2,flexWrap:"wrap",borderBottom:"1px solid #1b2638"}}>
         <Box><Typography sx={{fontWeight:950,fontSize:15}}>Member Directory</Typography><Typography sx={{fontSize:10,color:"#64748b",mt:.3}}>{members.length} members · Click a member to open full profile</Typography></Box>
         <Box sx={{display:"flex",gap:1,alignItems:"center",flexWrap:"wrap"}}>
-          <TextField size="small" placeholder="Search members..." value={search} onChange={(e)=>setSearch(e.target.value)} InputProps={{startAdornment:<InputAdornment position="start"><Search sx={{color:"#64748b"}}/></InputAdornment>}} sx={{minWidth:{xs:180,sm:240},"& .MuiOutlinedInput-root":{bgcolor:"#0a101c",color:"#e5e7eb","& fieldset":{borderColor:"#243043"}}}} />
+          <TextField size="small" placeholder="Search members..." value={search} onChange={(e)=>setSearch(e.target.value)} InputProps={{startAdornment:<InputAdornment position="start"><Search sx={{color:"#64748b"}}/></InputAdornment>}} sx={{minWidth:{xs:180,sm:240},"& .MuiOutlinedInput-root":{bgcolor:"#0a101c",color:"#f5f5f5","& fieldset":{borderColor:"#243043"}}}} />
           <Button variant="contained" startIcon={<PersonAdd/>} onClick={onAdd} sx={{textTransform:"none",fontWeight:900,bgcolor:"#7c3aed",borderRadius:2,"&:hover":{bgcolor:"#6d28d9"}}}>Add Member</Button>
         </Box>
       </Box>
@@ -4243,7 +4243,7 @@ function StatCard({
             <Avatar
               sx={{
                 bgcolor: "#e3f2fd",
-                color: "#1976d2",
+                color: "#FFD000",
               }}
             >
               {icon}
@@ -4272,11 +4272,11 @@ function SidebarItem({
         borderRadius: 2,
         mb: 0.5,
         bgcolor: active
-          ? "#1976d2"
+          ? "#FFD000"
           : "transparent",
         "&:hover": {
           bgcolor: active
-            ? "#1976d2"
+            ? "#FFD000"
             : "#1f2937",
         },
       }}
@@ -4564,7 +4564,7 @@ function FinancialAnalysis({ members }) {
                     bgcolor:
                       "#e3f2fd",
                     color:
-                      "#1976d2",
+                      "#FFD000",
                   }}
                 >
                   <Payments />
