@@ -35,10 +35,12 @@ app.use(
     origin: function (origin, callback) {
       if (!origin) return callback(null, true);
 
-      const allowed = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
+      const allowed =
+        /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
+        origin === "https://cuboid-fitness-backend.vercel.app";
 
       if (allowed) {
-        return callback(null, true);
+        return callback(null, true);  
       }
 
       return callback(new Error("CORS origin not allowed"));
@@ -47,6 +49,7 @@ app.use(
       "GET",
       "POST",
       "PUT",
+      "PATCH",
       "DELETE",
       "OPTIONS",
     ],
