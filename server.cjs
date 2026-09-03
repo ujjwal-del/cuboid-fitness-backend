@@ -37,7 +37,8 @@ app.use(
 
       const allowed =
         /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
-        origin === "https://cuboid-fitness-backend.vercel.app";
+        origin === "https://cuboid-fitness-backend.vercel.app" ||
+        origin === "https://customer-bot-sigma.vercel.app";
 
       if (allowed) {
         return callback(null, true);  
@@ -2552,3 +2553,4 @@ app.listen(
     console.log("");
   }
 );
+
